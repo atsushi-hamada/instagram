@@ -109,7 +109,10 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dAT-5B-M1o"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" backgroundImage="btn"/>
+                                <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handlePostButton:" destination="0ks-FD-QVO" eventType="touchUpInside" id="fAi-DO-NW7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9z-HF-Q9A">
                                 <rect key="frame" x="46.666666666666657" y="269" width="300" height="40"/>
@@ -117,7 +120,10 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="R5z-h1-qWn"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" backgroundImage="btn"/>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="0ks-FD-QVO" eventType="touchUpInside" id="akZ-sc-fNr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ybz-PV-gkR"/>
@@ -134,6 +140,10 @@
                             <constraint firstItem="zNB-Gz-5wf" firstAttribute="leading" secondItem="Ybz-PV-gkR" secondAttribute="leading" constant="10" id="sXi-0o-ghC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="zNB-Gz-5wf" id="4I5-4b-HqC"/>
+                        <outlet property="textField" destination="OPg-8f-hlY" id="tJ5-GI-Gd1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vd6-sD-ZHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

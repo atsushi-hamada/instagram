@@ -20,6 +20,7 @@
 		A92EDC8F2BAD5CB600EECD72 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92EDC8E2BAD5CB600EECD72 /* SettingViewController.swift */; };
 		A9347C062BAD661200140969 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9347C052BAD661200140969 /* TabBarController.swift */; };
 		A9347C082BAD6E2600140969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9347C072BAD6E2600140969 /* GoogleService-Info.plist */; };
+		A9EEC4DB2BB19A4200687E62 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EEC4DA2BB19A4200687E62 /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A92EDC8E2BAD5CB600EECD72 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A9347C052BAD661200140969 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A9347C072BAD6E2600140969 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9EEC4DA2BB19A4200687E62 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		B4C9415B0109BEC680BC65C8 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 			children = (
 				A92EDC682BAD55E000EECD72 /* AppDelegate.swift */,
 				A92EDC6A2BAD55E000EECD72 /* SceneDelegate.swift */,
+				A9EEC4DA2BB19A4200687E62 /* Const.swift */,
 				A92EDC862BAD5C6000EECD72 /* LoginViewController.swift */,
 				A92EDC882BAD5C7500EECD72 /* HomeViewController.swift */,
 				A92EDC8A2BAD5C8B00EECD72 /* ImageSelectViewController.swift */,
@@ -233,6 +236,7 @@
 				A92EDC872BAD5C6000EECD72 /* LoginViewController.swift in Sources */,
 				A92EDC692BAD55E000EECD72 /* AppDelegate.swift in Sources */,
 				A92EDC6B2BAD55E000EECD72 /* SceneDelegate.swift in Sources */,
+				A9EEC4DB2BB19A4200687E62 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
