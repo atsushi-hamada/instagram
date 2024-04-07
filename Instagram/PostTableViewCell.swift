@@ -14,6 +14,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var commentButton: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,7 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     // PostDataの内容をセルに表示
     func setPostData(_ postData: PostData) {
         // 画像の表示

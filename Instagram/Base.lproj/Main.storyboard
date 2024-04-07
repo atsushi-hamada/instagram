@@ -8,6 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Comment View Controller-->
+        <scene sceneID="nFl-Ve-3Lz">
+            <objects>
+                <viewController id="j7y-AT-PMb" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h2P-Gv-Qbo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを書く" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEZ-1M-sSi">
+                                <rect key="frame" x="10" y="259" width="373" height="324"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3vM-17-8Rr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UEZ-1M-sSi" firstAttribute="top" secondItem="3vM-17-8Rr" secondAttribute="top" constant="200" id="91F-PW-VdA"/>
+                            <constraint firstItem="UEZ-1M-sSi" firstAttribute="leading" secondItem="3vM-17-8Rr" secondAttribute="leading" constant="10" id="MWR-fX-qXd"/>
+                            <constraint firstItem="3vM-17-8Rr" firstAttribute="bottom" secondItem="UEZ-1M-sSi" secondAttribute="bottom" constant="200" id="der-MZ-QJM"/>
+                            <constraint firstItem="3vM-17-8Rr" firstAttribute="trailing" secondItem="UEZ-1M-sSi" secondAttribute="trailing" constant="10" id="kX5-yJ-Tbd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XQj-Ek-jYE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ub3-3a-S65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1456" y="738"/>
+        </scene>
         <!--ホーム-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -33,6 +62,7 @@
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="Gyn-eI-nap"/>
                     <connections>
                         <outlet property="tableView" destination="Fqp-yi-J41" id="aR7-9c-hbt"/>
+                        <segue destination="j7y-AT-PMb" kind="show" identifier="tocomment" id="Mkt-WW-5Tg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

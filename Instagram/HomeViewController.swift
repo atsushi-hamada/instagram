@@ -74,7 +74,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
         
+        cell.commentButton.addTarget(self, action:#selector(commentButton(_:forEvent:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func commentButton(_ sender: UIButton, forEvent event: UIEvent) {
+        print("DEBUG_PRINT: コメントボタンがタップされました。")
+        self.performSegue(withIdentifier: "tocomment", sender: self)
     }
     
     // セル内のボタンがタップされた時に呼ばれるメソッド
