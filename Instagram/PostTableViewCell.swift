@@ -17,6 +17,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var commenterLabel: UILabel!
+    @IBOutlet weak var moreButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
