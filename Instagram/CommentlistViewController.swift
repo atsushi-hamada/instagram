@@ -7,23 +7,30 @@
 
 import UIKit
 
-class CommentlistViewController: UIViewController {
-
+class CommentlistViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    // 投稿データを格納する配列
+    var postArray: [PostData] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        }
+    
+    
+    
+    func setPostData(_ postData: PostData) {
+        let commentNumber = postData.comment.count
+    }
+    // データの数（＝セルの数）を返すメソッド
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postArray.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
+        cell.setPostData(postArray[indexPath.row])
+        return cell
     }
-    */
 
 }

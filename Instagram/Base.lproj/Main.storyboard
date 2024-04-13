@@ -21,42 +21,75 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYF-3T-aAg">
+                                <rect key="frame" x="50" y="593" width="59" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="投稿"/>
+                                <connections>
+                                    <action selector="commentPostButton:" destination="j7y-AT-PMb" eventType="touchUpInside" id="FEX-Ic-xNd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-dA-5Mi">
+                                <rect key="frame" x="272" y="593" width="111" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
+                                <connections>
+                                    <action selector="commentCancelButton:" destination="j7y-AT-PMb" eventType="touchUpInside" id="DY8-lR-I8n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3vM-17-8Rr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UEZ-1M-sSi" firstAttribute="top" secondItem="3vM-17-8Rr" secondAttribute="top" constant="200" id="91F-PW-VdA"/>
+                            <constraint firstItem="3vM-17-8Rr" firstAttribute="trailing" secondItem="eBg-dA-5Mi" secondAttribute="trailing" constant="10" id="Lwy-P9-DMW"/>
                             <constraint firstItem="UEZ-1M-sSi" firstAttribute="leading" secondItem="3vM-17-8Rr" secondAttribute="leading" constant="10" id="MWR-fX-qXd"/>
+                            <constraint firstItem="jYF-3T-aAg" firstAttribute="top" secondItem="UEZ-1M-sSi" secondAttribute="bottom" constant="10" id="Nba-HU-ir0"/>
+                            <constraint firstItem="jYF-3T-aAg" firstAttribute="leading" secondItem="3vM-17-8Rr" secondAttribute="leading" constant="50" id="VUm-zD-wGe"/>
                             <constraint firstItem="3vM-17-8Rr" firstAttribute="bottom" secondItem="UEZ-1M-sSi" secondAttribute="bottom" constant="200" id="der-MZ-QJM"/>
                             <constraint firstItem="3vM-17-8Rr" firstAttribute="trailing" secondItem="UEZ-1M-sSi" secondAttribute="trailing" constant="10" id="kX5-yJ-Tbd"/>
+                            <constraint firstItem="eBg-dA-5Mi" firstAttribute="top" secondItem="UEZ-1M-sSi" secondAttribute="bottom" constant="10" id="kbF-O4-1tj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XQj-Ek-jYE"/>
+                    <connections>
+                        <outlet property="commentText" destination="UEZ-1M-sSi" id="M43-ze-ZEK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ub3-3a-S65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1456" y="738"/>
         </scene>
-        <!--Comment View Controller-->
+        <!--Commentlist View Controller-->
         <scene sceneID="Wax-b7-Y2Z">
             <objects>
-                <viewController id="kWZ-CV-X2T" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kWZ-CV-X2T" customClass="CommentlistViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CQf-iy-1Gh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fxP-Mq-YDG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D2W-Ji-rkh">
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pxK-Vf-EYO">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pxK-Vf-EYO" id="SBx-li-HPg">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Al-2I-alh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9Al-2I-alh" firstAttribute="trailing" secondItem="fxP-Mq-YDG" secondAttribute="trailing" id="6KB-us-cDB"/>
-                            <constraint firstItem="fxP-Mq-YDG" firstAttribute="top" secondItem="9Al-2I-alh" secondAttribute="top" id="ifs-uZ-xiZ"/>
-                            <constraint firstItem="fxP-Mq-YDG" firstAttribute="leading" secondItem="9Al-2I-alh" secondAttribute="leading" id="ioc-ZB-TTz"/>
-                            <constraint firstItem="9Al-2I-alh" firstAttribute="bottom" secondItem="fxP-Mq-YDG" secondAttribute="bottom" id="l7Y-2I-YFO"/>
+                            <constraint firstItem="D2W-Ji-rkh" firstAttribute="leading" secondItem="9Al-2I-alh" secondAttribute="leading" id="BKl-C0-2vO"/>
+                            <constraint firstItem="9Al-2I-alh" firstAttribute="trailing" secondItem="D2W-Ji-rkh" secondAttribute="trailing" id="OXT-Td-UcL"/>
+                            <constraint firstItem="9Al-2I-alh" firstAttribute="bottom" secondItem="D2W-Ji-rkh" secondAttribute="bottom" id="iYF-uF-HoT"/>
+                            <constraint firstItem="D2W-Ji-rkh" firstAttribute="top" secondItem="9Al-2I-alh" secondAttribute="top" id="r2G-FW-13v"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZbW-zn-r99"/>
