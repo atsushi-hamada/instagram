@@ -8,6 +8,9 @@
 import UIKit
 
 class CommentlistViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    @IBOutlet weak var tableview: UITableView!
+    
     // 投稿データを格納する配列
     var postArray: [PostData] = []
     

@@ -32,7 +32,7 @@ class CommentViewController: UIViewController {
         
         // 更新データを作成する
         var updateValue: FieldValue
-        var comment = commentText.text!
+        let comment = commentText.text!
         updateValue = FieldValue.arrayUnion([name!,comment])
         commentRef.updateData(["comment": updateValue])
         

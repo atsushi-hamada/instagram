@@ -119,13 +119,6 @@
             </connections>
             <point key="canvasLocation" x="212.21374045801525" y="159.85915492957747"/>
         </tableViewCell>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="YWN-Z2-2LA">
-            <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <state key="normal" title="Button"/>
-            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-            <point key="canvasLocation" x="749" y="343"/>
-        </button>
     </objects>
     <resources>
         <image name="like_none" width="40" height="40"/>

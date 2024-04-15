@@ -87,7 +87,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     @objc func moreButton(_ sender: UIButton, forEvent event: UIEvent) {
-        print("DEBUG_PRINT: コメントリストボタンがタップされました。")
+        print("DEBUG_PRINT: moreボタンがタップされました。")
         self.performSegue(withIdentifier: "tocommentlist", sender: self)
     }
     
