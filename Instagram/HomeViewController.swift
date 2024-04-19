@@ -61,6 +61,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         listener?.remove()
     }
     
+    // コメント/moreボタンで画面遷移する時に呼ばれる
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+           let postData = sender as! PostData
+           if segue.identifier == "tocomment" {
+               let commentViewController:CommentViewController = segue.destination as! CommentViewController
+               commentViewController.postData = postData
+           }
+           
+           if segue.identifier == "tocommentlist" {
+               let commentlistViewController:CommentlistViewController = segue.destination as! CommentlistViewController
+               commentlistViewController.postData = postData
+           }
+       }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postArray.count
@@ -83,12 +96,28 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @objc func commentButton(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: コメントボタンがタップされました。")
-        self.performSegue(withIdentifier: "tocomment", sender: self)
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        self.performSegue(withIdentifier: "tocomment", sender: postData)
     }
 
     @objc func moreButton(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: moreボタンがタップされました。")
-        self.performSegue(withIdentifier: "tocommentlist", sender: self)
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        self.performSegue(withIdentifier: "tocommentlist", sender: postData)
     }
     
     // セル内のボタンがタップされた時に呼ばれるメソッド
