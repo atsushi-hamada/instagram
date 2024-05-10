@@ -9,14 +9,15 @@ import UIKit
 
 class CommentlistViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
-    @IBOutlet weak var tableview: UITableView!
+
+    @IBOutlet weak var tableView: UITableView!
     var postData : PostData!
-    // 投稿データを格納する配列
-    var postArray: [PostData] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.fillerRowHeight = UITableView.automaticDimension
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     //func setPostData(_ postData: PostData) {
@@ -29,8 +30,8 @@ class CommentlistViewController: UIViewController,UITableViewDataSource,UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
-//cell.setPostData(comments.comment[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel!.text = postData.comment[indexPath.row]
         return cell
     }
 

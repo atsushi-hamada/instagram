@@ -34,7 +34,7 @@ class CommentViewController: UIViewController {
         let commentRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
         var updateValue: FieldValue
         let comment = commentText.text!
-        updateValue = FieldValue.arrayUnion([name!+comment])
+        updateValue = FieldValue.arrayUnion([name!+" : "+comment])
         commentRef.updateData(["comment": updateValue])
         
         // HUDで投稿完了を表示する

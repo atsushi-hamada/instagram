@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pxK-Vf-EYO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="pxK-Vf-EYO">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pxK-Vf-EYO" id="SBx-li-HPg">
@@ -94,7 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZbW-zn-r99"/>
                     <connections>
-                        <outlet property="tableview" destination="D2W-Ji-rkh" id="7us-IW-hwB"/>
+                        <outlet property="tableView" destination="D2W-Ji-rkh" id="2jf-bk-pdb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55s-92-GqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
